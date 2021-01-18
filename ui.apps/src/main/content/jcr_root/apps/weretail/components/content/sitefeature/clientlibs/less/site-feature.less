@@ -1,0 +1,91 @@
+/*
+ *  Copyright 2016 Adobe Systems Incorporated
+ *
+ *  Licensed under the Apache License, Version 2.0 (the "License");
+ *  you may not use this file except in compliance with the License.
+ *  You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *  Unless required by applicable law or agreed to in writing, software
+ *  distributed under the License is distributed on an "AS IS" BASIS,
+ *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *  See the License for the specific language governing permissions and
+ *  limitations under the License.
+ */
+@import (reference) "/apps/weretail/clientlibs/common/variables.less";
+@import (reference) "/apps/weretail/clientlibs/clientlib-site/less/main.less";
+
+@sitefeature-image-size: 36px;
+@sitefeature-image-gap: 16px;
+@sitefeature-image-space: @sitefeature-image-size + @sitefeature-image-gap;
+
+.we-SiteFeature {
+    .cmp-teaser {
+        width: 100%;
+        margin: 20px 0 40px;
+        padding-left: 20px;
+    }
+
+    .cmp-teaser__image {
+        float: left;
+        margin-right: @sitefeature-image-gap;
+
+        .cmp-image {
+            display: inline-block;
+            width: @sitefeature-image-size;
+        }
+    }
+
+    .cmp-teaser__title,
+    .cmp-teaser__description {
+        display: block;
+        margin: 0 0 0 @sitefeature-image-space;
+        width: ~"calc(100% - @{sitefeature-image-space})";
+    }
+
+    .cmp-teaser__title {
+        margin-bottom: 3px;
+        line-height: 20px;
+        font-size: @font-size-h4;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    .cmp-teaser__description,
+    .cmp-teaser__description p {
+        line-height: 18px;
+        font-weight: 400;
+        color: @gray-light;
+    }
+
+    .cmp-teaser__action-container {
+        display: none;
+    }
+}
+
+@media (min-width: @screen-md-min) {
+    .we-SiteFeature {
+        .cmp-teaser {
+            padding: 0;
+            text-align: center;
+        }
+
+        .cmp-teaser__image {
+            margin-right: 0;
+            float: none;
+        }
+
+        .cmp-teaser__image,
+        .cmp-teaser__title,
+        .cmp-teaser__description {
+            display: block;
+        }
+
+        .cmp-teaser__title,
+        .cmp-teaser__description {
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+}
