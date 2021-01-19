@@ -61,7 +61,6 @@
                     } else {
                         error = !(new RegExp(pattern)).test(value);
                     }
-
                     if (error) {
                         return "The field must match the pattern: " + pattern;
                     }
