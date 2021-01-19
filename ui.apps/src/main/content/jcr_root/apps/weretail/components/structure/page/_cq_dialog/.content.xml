@@ -3,7 +3,7 @@
           xmlns:cq="http://www.day.com/jcr/cq/1.0"
           xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
           xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
-          extraClientlibs="[cq.common.wcm,core.wcm.components.page.v2.editor,cq.wcm.msm.properties]"
+          extraClientlibs="[cq.common.wcm,core.wcm.components.page.v2.editor,cq.wcm.msm.properties,productValidation]"
           helpPath="https://www.adobe.com/go/aem_cmp_page_v2"
           trackingFeature="core-components:page:v2"
           mode="edit"
@@ -23,11 +23,6 @@
                     granite:class="cq-siteadmin-admin-properties-tab"
                     sling:resourceType="granite/ui/components/coral/foundation/tabs"
                     size="L">
-                <include-clientlibs
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="granite/ui/components/coral/foundation/includeclientlibs"
-                        js="[cq:include]"
-                />
                 <items jcr:primaryType="nt:unstructured">
                     <customtab
                             jcr:title="JSON"
