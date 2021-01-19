@@ -43,20 +43,36 @@
                                             <name
                                                     sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                                                 fieldLabel="Name"
-                                                jcr:primaryType="nt:unstructured"/>
+                                                    validation="txt-validate"
+                                                jcr:primaryType="nt:unstructured">
+                                        <granite:data jcr:primaryType="nt:unstructured"
+                                                        pattern="systemKey"/>
+                                            </name>
                                             <model
                                                     sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                                                     fieldLabel="Model"
-                                                    jcr:primaryType="nt:unstructured"/>
+                                                    validation="txt-validate"
+                                                    jcr:primaryType="nt:unstructured">
+                                        <granite:data jcr:primaryType="nt:unstructured"
+                                                      pattern="systemKey"/>
+                                            </model>
                                             <color
                                                     sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                                                     fieldLabel="Color"
-                                                    jcr:primaryType="nt:unstructured"/>
+                                                    validation="txt-validate"
+                                                    jcr:primaryType="nt:unstructured">
+                                        <granite:data jcr:primaryType="nt:unstructured"
+                                                      pattern="systemKey"/>
+                                            </color>
                                             <description
                                                 sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
                                                 fieldLabel="Description"
-                                                jcr:primaryType="nt:unstructured"/>
-                                        </items>
+                                                validation="txt-validate"
+                                                jcr:primaryType="nt:unstructured">
+                                        <granite:data jcr:primaryType="nt:unstructured"
+                                                      pattern="systemKey"/>
+                                            </description>
+
                                         </brand>
                                             <offer
                                                     jcr:title="Offer"
