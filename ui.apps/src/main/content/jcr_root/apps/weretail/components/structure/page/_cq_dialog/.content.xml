@@ -41,47 +41,72 @@
                                             jcr:primaryType="nt:unstructured">
                                         <items jcr:primaryType="nt:unstructured">
                                             <name
+                                                    name="./brand"
+                                                    validation="txt-validate"
                                                     sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                                                 fieldLabel="Name"
-                                                jcr:primaryType="nt:unstructured"/>
+                                                jcr:primaryType="nt:unstructured">
+                                                    <granite-data jcr:primaryType="nt:unstructured" pattern="systemKey" />
+                                            </name>
                                             <model
+                                                    name="./model"
+                                                    validation="txt-validate"
                                                     sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                                                     fieldLabel="Model"
-                                                    jcr:primaryType="nt:unstructured"/>
+                                                    jcr:primaryType="nt:unstructured">
+                                                    <granite-data  jcr:primaryType="nt:unstructured" pattern="systemKey" />
+                                            </model>
                                             <color
+                                                    name="./color"
+                                                    validation="txt-validate"
                                                     sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                                                     fieldLabel="Color"
-                                                    jcr:primaryType="nt:unstructured"/>
+                                                    jcr:primaryType="nt:unstructured">
+                                                <granite-data jcr:primaryType="nt:unstructured" pattern="systemKey" />
+                                            </color>
                                             <description
+                                                    name="./description"
+                                                    validation="txt-validate"
                                                 sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
                                                 fieldLabel="Description"
-                                                jcr:primaryType="nt:unstructured"/>
+                                                jcr:primaryType="nt:unstructured">
+                                            <granite-data jcr:primaryType="nt:unstructured" pattern="systemKey" />
+                                            </description>
                                         </items>
                                         </brand>
                                             <offer
+                                                    validation="txt-validate"
                                                     jcr:title="Offer"
                                                     sling:resourceType="granite/ui/components/coral/foundation/form/fieldset"
                                                     jcr:primaryType="nt:unstructured">
                                                     <items jcr:primaryType="nt:unstructured">
                                                         <price
+                                                                name="./price"
+                                                                validation="txt-validate"
                                                                 sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
                                                                 fieldLabel="Price"
                                                                 min="0"
-                                                                jcr:primaryType="nt:unstructured"/>
+                                                                jcr:primaryType="nt:unstructured">
+                                                        <granite-data  jcr:primaryType="nt:unstructured" pattern="number" />
+                                                        </price>
                                                         <currency
+                                                                name="./currency"
                                                                 sling:resourceType="granite/ui/components/coral/foundation/form/select"
                                                                 fieldLabel="Currency"
                                                                 jcr:primaryType="nt:unstructured">
                                                                  <items jcr:primaryType="nt:unstructured">
                                                                      <euro
+                                                                             value="euro"
                                                                              text="EUR"
                                                                              jcr:primaryType="nt:unstructured"/>
 
                                                                      <dollar
+                                                                             value="dollar"
                                                                              text="USD"
                                                                              jcr:primaryType="nt:unstructured"/>
 
                                                                      <pound
+                                                                             value="pound"
                                                                              text="GBS"
                                                                              jcr:primaryType="nt:unstructured"/>
                                                                  </items>
@@ -96,17 +121,25 @@
                                                     jcr:primaryType="nt:unstructured">
                                                 <items jcr:primaryType="nt:unstructured">
                                                     <reviewCount
+                                                            name="./reviewCount"
+
+                                                            validation="txt-validate"
                                                             sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
                                                             fieldLabel="Review Count"
                                                             min="0"
-                                                            jcr:primaryType="nt:unstructured"/>
+                                                            jcr:primaryType="nt:unstructured">
+                                                    <granite-data  jcr:primaryType="nt:unstructured" pattern="number" />
+                                                    </reviewCount>
                                                     <ratingValue
+                                                            name="./ratingValue"
+                                                            validation="txt-validate"
                                                             sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
                                                             fieldLabel="Rating value"
                                                             min="0"
                                                             max="5"
-                                                            jcr:primaryType="nt:unstructured"/>
-
+                                                            jcr:primaryType="nt:unstructured">
+                                                    <granite-data  jcr:primaryType="nt:unstructured" pattern="systemKey" />
+                                                    </ratingValue>
 
                                                 </items>
                                             </review>
