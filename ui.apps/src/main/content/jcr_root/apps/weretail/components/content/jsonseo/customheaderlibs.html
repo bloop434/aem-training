@@ -13,6 +13,8 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 */-->
+<div data-sly-use.info="validation.js">
+
 <script type="application/ld+json">
     {
         "@context": "https://schema.org/",
@@ -23,8 +25,8 @@
             "https://example.com/photos/4x3/photo.jpg",
             "https://example.com/photos/16x9/photo.jpg"
         ],
-        "description": "${properties @ context = 'attribute' }",
-        "color": "${properties.color @ context = 'attribute' }",
+        "description": ${resourcePage.properties.brand  @ context = 'attribute' },
+        "color": "${currentNode}",
         "model": "${properties.model @ context = 'attribute' }",
         "sku": "0446310786",
         "mpn": "925872",
@@ -60,3 +62,4 @@
         }
     }
 </script>
+</div>
